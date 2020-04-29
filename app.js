@@ -13,14 +13,8 @@ setInterval(dataSource.updateDataCountries, 1000 * 60 * 60 * 24);
 
 const app = express();
 app.use(cors());
-app.set("view engine", "ejs");
-app.use(express.static(__dirname + "/public"));
 
 // use the api route
 app.use("/api", api);
-
-app.get("/", (req, res) => {
-  res.render("index");
-});
 
 app.listen(port, () => console.log("server is start on 3000"));
