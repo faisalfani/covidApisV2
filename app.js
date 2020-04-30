@@ -13,7 +13,7 @@ setInterval(dataSource.updateDataCountries, 1000 * 60 * 60 * 24);
 
 const app = express();
 app.use(cors());
-app.use(express.static("public"));
+app.use(express.static(__dirname + "/public"));
 // use the api route
 app.use("/api", api);
 app.get("/", (req, res) => {
