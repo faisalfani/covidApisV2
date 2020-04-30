@@ -2,14 +2,21 @@
   background-color: #fcf8e8;
 }
 
-.brown {
-  background-color: #df7861;
+code {
+  background: #e6e7ea;
+  border: 1px solid #eaedf1;
+  border-radius: 3px;
+  padding: 3px;
+  color: black;
 }
 
-.light-brown {
-  background-color: #ecb390;
+.text-wrap {
+  font-size: 14px;
+  line-height: 1.66;
 }
 
-.grey {
-  background-color: #ecdfc8;
+pre code {
+  font-size: inherit;
+  color: inherit;
+  word-break: normal;
 }
