@@ -20,3 +20,7 @@ pre code {
   color: inherit;
   word-break: normal;
 }
+
+.footer {
+  margin-top: 3%;
+}

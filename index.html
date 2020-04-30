@@ -12,7 +12,7 @@
 
     <link rel="stylesheet" href="./style/style.css" />
     <link rel="icon" href="./img/coronavirus.svg" />
-    <title>Covid Apps</title>
+    <title>Covid Apis</title>
   </head>
   <body class="light-grey">
     <!-- navbar -->
@@ -28,8 +28,9 @@
         <strong>Covid</strong>
       </a>
     </nav>
+
     <!-- header content -->
-    <div class="header text-center mt-2">
+    <div class="header text-center mt-4">
       <h1 class="display-3">Covid Apis</h1>
       <blockquote class="blockquote text-center">
         <p class="mb-0">
@@ -40,10 +41,11 @@
         </footer>
       </blockquote>
     </div>
+
     <!-- main content -->
     <div class="container">
       <div class="col-lg-12 col md-12 mt-5">
-        <!-- card -->
+        <!-- card global-->
         <div class="card shadow rounded-lg mt-4" style="width: 100%;">
           <div class="card-header pb-0">
             <h6 class="card-title">Global Data</h6>
@@ -80,6 +82,196 @@
             </div>
           </div>
         </div>
+
+        <!-- card countries-->
+        <div class="card shadow rounded-lg mt-4" style="width: 100%;">
+          <div class="card-header pb-0">
+            <h6 class="card-title">Countries Data</h6>
+          </div>
+          <div class="card-body">
+            <div class="text-wrap">
+              <p>
+                <code>
+                  https://arcane-chamber-95694.herokuapp.com/api/countries
+                </code>
+              </p>
+              <p>Example Response :</p>
+              <pre
+                class="hljs"
+                style="
+                  display: block;
+                  overflow-x: auto;
+                  padding: 0.5em;
+                  background: #e6e7ea;
+                  color: rgb(68, 68, 68);
+                  line-height: 2;
+                "
+              >
+    {
+        <span class="hljs-attr">"data"</span>: [
+            {
+              <span class="hljs-attr">"country"</span>: <span class="hljs-string" style="color: rgb(136, 0, 0);">"World"</span>,
+              <span class="hljs-attr">"cases"</span>: <span class="hljs-number" style="color: rgb(136, 0, 0);">3190584</span>,
+              <span class="hljs-attr">"todayCases"</span>: <span class="hljs-number" style="color: rgb(136, 0, 0);">54076</span>,
+              <span class="hljs-attr">"deaths"</span>: <span class="hljs-number" style="color: rgb(136, 0, 0);">225857</span>,
+              <span class="hljs-attr">"todayDeaths"</span>: <span class="hljs-number" style="color: rgb(136, 0, 0);">8044</span>,
+              <span class="hljs-attr">"recovered"</span>: <span class="hljs-number" style="color: rgb(136, 0, 0);">986725</span>,
+              <span class="hljs-attr">"active"</span>: <span class="hljs-number" style="color: rgb(136, 0, 0);">1978002</span>,
+              <span class="hljs-attr">"critical"</span>: <span class="hljs-number" style="color: rgb(136, 0, 0);">60419</span>,
+              <span class="hljs-attr">"casesPerOneMillion"</span>: <span class="hljs-number" style="color: rgb(136, 0, 0);">409</span>,
+              <span class="hljs-attr">"deathsPerOneMillion"</span>: <span class="hljs-number" style="color: rgb(136, 0, 0);">29</span>,
+              <span class="hljs-attr">"totalTests"</span>: <span class="hljs-number" style="color: rgb(136, 0, 0);">0</span>,
+              <span class="hljs-attr">"testsPerOneMillion"</span>: <span class="hljs-number" style="color: rgb(136, 0, 0);">0</span>
+            },
+            . . .
+          ],
+        <span class="hljs-attr">"updatedAt"</span>: <span class="hljs-string" style="color: rgb(136, 0, 0);">"29/4/2020"</span>
+    }
+            </pre>
+            </div>
+          </div>
+        </div>
+
+        <!-- card country-->
+        <div class="card shadow rounded-lg mt-4" style="width: 100%;">
+          <div class="card-header pb-0">
+            <h6 class="card-title">Country Data</h6>
+          </div>
+          <div class="card-body">
+            <div class="text-wrap">
+              <p>
+                <code>
+                  https://arcane-chamber-95694.herokuapp.com/api/countries/:country
+                </code>
+              </p>
+              <p>Example Response :</p>
+              <pre
+                class="hljs"
+                style="
+                  display: block;
+                  overflow-x: auto;
+                  padding: 0.5em;
+                  background: #e6e7ea;
+                  color: rgb(68, 68, 68);
+                "
+              >
+    {
+        <span class="hljs-attr">"data"</span>: {
+              <span class="hljs-attr">"country"</span>: <span class="hljs-string" style="color: rgb(136, 0, 0);">"USA"</span>,
+              <span class="hljs-attr">"cases"</span>: <span class="hljs-number" style="color: rgb(136, 0, 0);">1049431</span>,
+              <span class="hljs-attr">"todayCases"</span>: <span class="hljs-number" style="color: rgb(136, 0, 0);">13666</span>,
+              <span class="hljs-attr">"deaths"</span>: <span class="hljs-number" style="color: rgb(136, 0, 0);">60640</span>,
+              <span class="hljs-attr">"todayDeaths"</span>: <span class="hljs-number" style="color: rgb(136, 0, 0);">1374</span>,
+              <span class="hljs-attr">"recovered"</span>: <span class="hljs-number" style="color: rgb(136, 0, 0);">144411</span>,
+              <span class="hljs-attr">"active"</span>: <span class="hljs-number" style="color: rgb(136, 0, 0);">844380</span>,
+              <span class="hljs-attr">"critical"</span>: <span class="hljs-number" style="color: rgb(136, 0, 0);">19110</span>,
+              <span class="hljs-attr">"casesPerOneMillion"</span>: <span class="hljs-number" style="color: rgb(136, 0, 0);">3170</span>,
+              <span class="hljs-attr">"deathsPerOneMillion"</span>: <span class="hljs-number" style="color: rgb(136, 0, 0);">183</span>,
+              <span class="hljs-attr">"totalTests"</span>: <span class="hljs-number" style="color: rgb(136, 0, 0);">6043315</span>,
+              <span class="hljs-attr">"testsPerOneMillion"</span>: <span class="hljs-number" style="color: rgb(136, 0, 0);">18258</span>
+        },
+        <span class="hljs-attr">"updatedAt"</span>: <span class="hljs-string" style="color: rgb(136, 0, 0);">"29/4/2020"</span>
+    }
+            </pre>
+            </div>
+          </div>
+        </div>
+
+        <!-- card all indonesian Province-->
+        <div class="card shadow rounded-lg mt-4" style="width: 100%;">
+          <div class="card-header pb-0">
+            <h6 class="card-title">Indonesian Provinces Data</h6>
+          </div>
+          <div class="card-body">
+            <div class="text-wrap">
+              <p>
+                <code>
+                  https://arcane-chamber-95694.herokuapp.com/api/provinsi
+                </code>
+              </p>
+              <p>Example Response :</p>
+              <pre
+                class="hljs"
+                style="
+                  display: block;
+                  overflow-x: auto;
+                  padding: 0.5em;
+                  background: #e6e7ea;
+                  color: rgb(68, 68, 68);
+                  line-height: 2;
+                "
+              >
+    {
+        <span class="hljs-attr">"data"</span>: [
+            {
+                <span class="hljs-attr">"attributes"</span>: {
+                  <span class="hljs-attr">"FID"</span>: <span class="hljs-number" style="color: rgb(136, 0, 0);">11</span>,
+                  <span class="hljs-attr">"Kode_Provi"</span>: <span class="hljs-number" style="color: rgb(136, 0, 0);">31</span>,
+                  <span class="hljs-attr">"Provinsi"</span>: <span class="hljs-string" style="color: rgb(136, 0, 0);">"DKI Jakarta"</span>,
+                  <span class="hljs-attr">"Kasus_Posi"</span>: <span class="hljs-number" style="color: rgb(136, 0, 0);">4092</span>,
+                  <span class="hljs-attr">"Kasus_Semb"</span>: <span class="hljs-number" style="color: rgb(136, 0, 0);">440</span>,
+                  <span class="hljs-attr">"Kasus_Meni"</span>: <span class="hljs-number" style="color: rgb(136, 0, 0);">370</span>
+                }
+            },
+            ...
+        ],
+        <span class="hljs-attr">"updattedAt"</span>: <span class="hljs-string" style="color: rgb(136, 0, 0);">"29/4/2020 18.23.18"</span>
+    }
+            </pre>
+            </div>
+          </div>
+        </div>
+
+        <!-- card all indonesian Province-->
+        <div class="card shadow rounded-lg mt-4" style="width: 100%;">
+          <div class="card-header pb-0">
+            <h6 class="card-title">Indonesian Province Data</h6>
+          </div>
+          <div class="card-body">
+            <div class="text-wrap">
+              <p>
+                <code>
+                  https://arcane-chamber-95694.herokuapp.com/api/provinsi/:provinsi
+                </code>
+              </p>
+              <p>Example Response :</p>
+              <pre
+                class="hljs"
+                style="
+                  display: block;
+                  overflow-x: auto;
+                  padding: 0.5em;
+                  background: #e6e7ea;
+                  color: rgb(68, 68, 68);
+                  list-style: 2;
+                "
+              >
+    {
+        <span class="hljs-attr">"data"</span>: {
+            <span class="hljs-attr">"FID"</span>: <span class="hljs-number" style="color: rgb(136, 0, 0);">31</span>,
+            <span class="hljs-attr">"Kode_Provi"</span>: <span class="hljs-number" style="color: rgb(136, 0, 0);">81</span>,
+            <span class="hljs-attr">"Provinsi"</span>: <span class="hljs-string" style="color: rgb(136, 0, 0);">"Maluku"</span>,
+            <span class="hljs-attr">"Kasus_Posi"</span>: <span class="hljs-number" style="color: rgb(136, 0, 0);">23</span>,
+            <span class="hljs-attr">"Kasus_Semb"</span>: <span class="hljs-number" style="color: rgb(136, 0, 0);">12</span>,
+            <span class="hljs-attr">"Kasus_Meni"</span>: <span class="hljs-number" style="color: rgb(136, 0, 0);">0</span>
+        },
+        <span class="hljs-attr">"updatedAt"</span>: <span class="hljs-string" style="color: rgb(136, 0, 0);">"29/4/2020 18.23.18"</span>
+    }
+            </pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- footer section -->
+    <div class="footer bg-light">
+      <div class="container">
+        <h5 class="text-center display-6">
+          <img src="./img/coronavirus.svg" width="30px" height="30px" alt="" />
+          <strong>Covid</strong> Api
+        </h5>
+        <p class="text-center">Handle with Care. Copyright &copy; 2020</p>
       </div>
     </div>
   </body>
